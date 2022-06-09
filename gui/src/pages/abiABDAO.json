@@ -1,0 +1,404 @@
+[
+  {
+    "anonymous": false,
+    "inputs": [
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "previousOwner",
+        "type": "address"
+      },
+      {
+        "indexed": true,
+        "internalType": "address",
+        "name": "newOwner",
+        "type": "address"
+      }
+    ],
+    "name": "OwnershipTransferred",
+    "type": "event"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "cid",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "ty",
+        "type": "string"
+      },
+      {
+        "internalType": "address",
+        "name": "onBoardaddr",
+        "type": "address"
+      }
+    ],
+    "name": "createProposal",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "cid",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "ty",
+        "type": "string"
+      },
+      {
+        "internalType": "string",
+        "name": "command",
+        "type": "string"
+      }
+    ],
+    "name": "createProposalOwner",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "cid",
+        "type": "string"
+      },
+      {
+        "internalType": "address",
+        "name": "abdStaffContract",
+        "type": "address"
+      }
+    ],
+    "name": "executeProposal",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "cid",
+        "type": "string"
+      }
+    ],
+    "name": "getAbstainVotes",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "cid",
+        "type": "string"
+      }
+    ],
+    "name": "getAgainstVotes",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "cid",
+        "type": "string"
+      }
+    ],
+    "name": "getForVotes",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "cid",
+        "type": "string"
+      }
+    ],
+    "name": "getProposalStatus",
+    "outputs": [
+      {
+        "internalType": "string",
+        "name": "",
+        "type": "string"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getProposals",
+    "outputs": [
+      {
+        "internalType": "string[]",
+        "name": "",
+        "type": "string[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256[]",
+        "name": "arr",
+        "type": "uint256[]"
+      }
+    ],
+    "name": "getQFSum",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "pure",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256[]",
+        "name": "arr",
+        "type": "uint256[]"
+      }
+    ],
+    "name": "getSum",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "pure",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "owner",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "renounceOwnership",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "cid",
+        "type": "string"
+      }
+    ],
+    "name": "results",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "forVotes",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "againstVotes",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "abstrainVotes",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "funding",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct ABDAO.Votes",
+        "name": "votes",
+        "type": "tuple"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "forVotes",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "againstVotes",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "abstrainVotes",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "funding",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct ABDAO.Votes",
+        "name": "qfVotes",
+        "type": "tuple"
+      },
+      {
+        "components": [
+          {
+            "internalType": "uint256",
+            "name": "forVotes",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "againstVotes",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "abstrainVotes",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "funding",
+            "type": "uint256"
+          }
+        ],
+        "internalType": "struct ABDAO.Votes",
+        "name": "finalVotes",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "x",
+        "type": "uint256"
+      }
+    ],
+    "name": "sqrt",
+    "outputs": [
+      {
+        "internalType": "uint256",
+        "name": "y",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "pure",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "newOwner",
+        "type": "address"
+      }
+    ],
+    "name": "transferOwnership",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "cid",
+        "type": "string"
+      }
+    ],
+    "name": "voteAbstain",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "cid",
+        "type": "string"
+      }
+    ],
+    "name": "voteAgainst",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "string",
+        "name": "cid",
+        "type": "string"
+      }
+    ],
+    "name": "voteFor",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  }
+]
